@@ -1,0 +1,3 @@
+# `setHeaders()` sets only `s-maxage`, never `max-age`
+
+Firebase Hosting has no split header channel like Netlify/Vercel/Cloudflare's `<Platform>-CDN-Cache-Control` — its CDN reads `maxAge`/`s-maxage` directly off the same `Cache-Control` header the browser sees. We still set only `Cache-Control: public, s-maxage=<maxAge>` and never mirror the value into `max-age`, to keep `Astro.cache.set()`'s meaning consistent across every provider: it configures CDN freshness, not browser freshness. A developer who wants explicit browser caching sets `Cache-Control`/`max-age` themselves; without `max-age`, browsers fall back to heuristic caching, which is the same behavior they'd get on Netlify/Vercel/Cloudflare when they don't set it separately.

@@ -5,6 +5,10 @@
 		".": {
 			"entry": [],
 			"project": []
+		},
+		"packages/hosting": {
+			"entry": [],
+			"project": ["src/**/*.ts"]
 		}
 	}
 }

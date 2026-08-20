@@ -1,0 +1,37 @@
+{
+	"name": "@astro-firebase/hosting",
+	"version": "0.0.0",
+	"description": "Firebase Hosting CDN cache provider for Astro",
+	"type": "module",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/galkin/astro-firebase.git",
+		"directory": "packages/hosting"
+	},
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
+		},
+		"./runtime": {
+			"types": "./dist/runtime.d.ts",
+			"default": "./dist/runtime.js"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsc -b",
+		"test": "vitest run"
+	},
+	"peerDependencies": {
+		"astro": "^7.0.0"
+	},
+	"devDependencies": {
+		"astro": "^7.2.4",
+		"typescript": "~6.0.3",
+		"vitest": "^4.1.11"
+	}
+}
