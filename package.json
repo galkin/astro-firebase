@@ -1,0 +1,54 @@
+{
+	"name": "astro-firebase",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/galkin/astro-firebase.git"
+	},
+	"license": "MIT",
+	"engines": {
+		"node": ">=24"
+	},
+	"packageManager": "pnpm@11.21.0",
+	"scripts": {
+		"build": "turbo run build",
+		"dev": "turbo run dev",
+		"test": "turbo run test",
+		"typecheck": "tsc -b",
+		"lint": "eslint --cache",
+		"lint:fix": "eslint --cache --fix",
+		"format": "prettier -w . --ignore-unknown --cache",
+		"format:check": "prettier -c . --ignore-unknown --cache",
+		"knip": "knip",
+		"publint": "pnpm -r exec publint",
+		"changeset": "changeset",
+		"version": "changeset version",
+		"release": "turbo run build && changeset publish",
+		"prepare": "husky"
+	},
+	"devDependencies": {
+		"@changesets/cli": "^3.0.1",
+		"@eslint/js": "^10.0.1",
+		"@types/node": "^26.2.0",
+		"eslint": "^10.8.1",
+		"husky": "^9.1.7",
+		"knip": "^6.32.2",
+		"lint-staged": "^17.3.0",
+		"prettier": "^3.9.6",
+		"publint": "^0.3.24",
+		"turbo": "^2.10.2",
+		"typescript": "~6.0.3",
+		"typescript-eslint": "^8.59.1",
+		"vitest": "^4.1.11"
+	},
+	"lint-staged": {
+		"*.{ts,tsx,js,mjs,cjs}": [
+			"eslint --cache --fix"
+		],
+		"*": [
+			"prettier -w --ignore-unknown --cache"
+		]
+	}
+}
