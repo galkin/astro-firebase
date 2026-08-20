@@ -1,0 +1,5 @@
+---
+'@astro-firebase/hosting': minor
+---
+
+Add `@astro-firebase/hosting`, a Firebase Hosting CDN cache provider implementing Astro's Cache Provider API: `setHeaders()` (CDN-facing `s-maxage`, `Last-Modified`/`ETag` passthrough) and `invalidate()` (path purge via Firebase's undocumented `PURGE` method). Cache tags and stale-while-revalidate, which Firebase Hosting's CDN doesn't support, are governed by a configurable `onUnsupported` policy.
