@@ -1,5 +1,8 @@
 # @astro-firebase/hosting
 
+[![npm](https://img.shields.io/npm/v/@astro-firebase/hosting)](https://www.npmjs.com/package/@astro-firebase/hosting)
+[![license](https://img.shields.io/npm/l/@astro-firebase/hosting)](../../LICENSE)
+
 A Firebase Hosting CDN [cache provider](https://docs.astro.build/en/reference/cache-provider-reference/) for Astro — the same pattern as `@astrojs/netlify/cache`, `@astrojs/vercel/cache`, and `@astrojs/cloudflare/cache`, targeting Firebase Hosting instead.
 
 It only sets response headers and calls Firebase Hosting's cache-purge endpoint. It does not configure `firebase.json` and does not deploy — pair it with whatever SSR adapter you already use to run Astro on Firebase (Cloud Functions, Cloud Run, etc.).
