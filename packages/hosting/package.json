@@ -1,6 +1,6 @@
 {
 	"name": "@astro-firebase/hosting",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"description": "Firebase Hosting CDN cache provider for Astro",
 	"type": "module",
 	"license": "MIT",
